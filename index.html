@@ -1,12 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>PMI IM</title>
+  <meta charset='utf-8' />
+  <title>Display a map</title>
+  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.46.0/mapbox-gl.js'></script>
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.46.0/mapbox-gl.css' rel='stylesheet' />
+  <style>
+    body { margin:0; padding:0; }
+    #map { position:absolute; top:0; bottom:0; width:100%; }
+  </style>
 </head>
 <body>
-    <h2>Peta Operasi Bencana PMI</h2>
+
+<div id='map'></div>
+<script>
+mapboxgl.accessToken = 'pk.eyJ1IjoiYmVuamlkYWQiLCJhIjoibzc3T19oMCJ9.eZgTRy6mED7l3a7J79wfjg';
+const map = new mapboxgl.Map({
+  container: 'map',
+  style: 'mapbox://styles/benjidad/cjfwfl7f5b4mj2rpklpxp8u7p',
+  center: [104.340441, -5.320440],
+  zoom: 13.1
+});
+</script>
+
 </body>
 </html>
